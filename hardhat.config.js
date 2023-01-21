@@ -8,7 +8,11 @@ const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY;
 
 module.exports = {
   solidity: "0.8.7",
+  defaultNetwork: "hardhat",
   networks: {
+    hardhat: {
+      chainId: 31337,
+    },
     mumbai: {
       url: MUMBAI_RPC_URL,
       accounts: [MUMBAI_PRIVATE_KEY],
