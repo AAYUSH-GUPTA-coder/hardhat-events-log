@@ -21,8 +21,8 @@ Explored how to use events in smart conatract development using hardhat. Also pr
 ## Quickstart
 
 ```shell
-git clone https://github.com/AAYUSH-GUPTA-coder/Gelato-lunchMoney
-cd Gelato-lunchMoney
+git clone https://github.com/AAYUSH-GUPTA-coder/hardhat-events-log
+cd hardhat-events-log
 yarn
 ```
 
