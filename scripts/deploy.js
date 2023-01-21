@@ -1,11 +1,23 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Contract = await hre.ethers.getContractFactory("OurToken");
+  const Contract = await hre.ethers.getContractFactory("SimpleStorage");
   const contract = await Contract.deploy();
   await contract.deployed();
   console.log("contract deployed to:", contract.address);
-  const transcationResponse = await simpleStorage
+  const transcationResponse = await contract.store(1);
+  const transationReceipt = await transcationResponse.wait();
+  // console.log(transationReceipt);
+  // old number
+  console.log(transationReceipt.events[0].args.oldNumber.toString());
+  // getting new number
+  console.log(transationReceipt.events[0].args.newNumber.toString());
+  // getting addedNumber
+  console.log(transationReceipt.events[0].args.addedNumber.toString());
+  // getting sender
+  console.log(transationReceipt.events[0].args.sender);
+  // events
+  // console.log(tran4sationReceipt.events);
 
   console.log("Sleeping.....");
   // Wait for etherscan to notice that the contract has been deployed
