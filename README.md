@@ -4,6 +4,17 @@ Explored how to use events in smart conatract development using hardhat. Also pr
 ## ✨Mumbai Contract Address: 0xBdA83b8a6962e4bAc2eC9cF99Ed7536d6DA4A6CD✨
 ## ✨[Polygonscan Mumbai link](https://mumbai.polygonscan.com/address/0xBdA83b8a6962e4bAc2eC9cF99Ed7536d6DA4A6CD#code)✨
 
+# What is events in smart contracts
+In a smart contract, an event is a way for the contract to emit a log or a message that can be recorded on the blockchain. Events are typically used to notify external entities (such as Protocols or other smart contracts) that something has happened within the contract.
+
+An event is defined using the event keyword in the Solidity programming language, and it consists of a name, a list of parameters, and an optional documentation string. Events can be emitted using the emit keyword.
+
+When an event is emitted, it creates a log on the blockchain that can be indexed and queried by external entities. This allows external entities to listen for and respond to events emitted by a contract.
+
+For example, a smart contract for a crowdfunding campaign might emit an event when a new contribution is made. This event could include information about the contributor (such as their address), the amount contributed, and the current total raised.
+
+In short, Events in smart contracts allow for external entities to listen and respond to specific actions that happens within the contract, and it is a powerful tool for creating decentralized applications.
+
 # Getting Started
 
 ## Requirements
